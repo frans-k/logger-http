@@ -18,7 +18,11 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+config.logger = HttpLogger.new('https://data.logentries.com', '/ACCOUNT_KEY/hosts/HOST/LOG/?realtime=1')
+
+## TODO
+
+- Buffer requests
 
 ## Contributing
 
