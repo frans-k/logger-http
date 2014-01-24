@@ -1,8 +1,8 @@
 class HttpLogger::Base
-  def initialize(base_uri, path, request_source)
+  def initialize(base_uri, path, request_source, debug: false)
     @base_uri = URI.parse(base_uri)
     @path = path
-    @debug_logger = Logger.new('http_logger.log')
+    @debug_logger = Logger.new('log/http_logger.log') if debug
     @request_source = request_source
     @queue = Queue.new
     dbg "initialized"
