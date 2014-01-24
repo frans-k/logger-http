@@ -13,7 +13,7 @@ class HttpLogger::Base
     start
 
     @queue << message
-  rescue => e
+  rescue StandardError => e
     dbg "#{self.class} - #{e.class} - #{e.message}"
     close
   end
@@ -54,7 +54,7 @@ class HttpLogger::Base
   def close
     stop
     connection && connection.finish
-  rescue => e
+  rescue StandardError => e
     dbg "#{self.class} - #{e.class} - #{e.message}"
   end
 
