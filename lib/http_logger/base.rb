@@ -12,7 +12,7 @@ class HttpLogger::Base
     dbg "queueing message"
     start
 
-    @queue << message
+    @queue << "#{message}\n"
   rescue StandardError => e
     dbg "#{self.class} - #{e.class} - #{e.message}"
     close
@@ -42,8 +42,7 @@ class HttpLogger::Base
       end
 
       dbg "Sending message"
-      put = @request_source.new(@path, data)
-      connection.request @base_uri + @path, put
+      request(data)
     end
 
   rescue StandardError
@@ -56,6 +55,11 @@ class HttpLogger::Base
     connection && connection.finish
   rescue StandardError => e
     dbg "#{self.class} - #{e.class} - #{e.message}"
+  end
+
+  def request data
+    put = @request_source.new(@path, data)
+    connection.request @base_uri + @path, put
   end
 
   private
