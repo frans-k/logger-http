@@ -47,6 +47,7 @@ class HttpLogger::Base
 
   rescue StandardError
     dbg("Got exception in run loop - #{ $! }")
+    @connection = nil
     raise
   end
 
@@ -64,9 +65,6 @@ class HttpLogger::Base
 
   private
   def connection
-    return @connection if @connection
-    @connection = Net::HTTP::Persistent.new('logger').tap do |c|
-      c.read_timeout = 0.01
-    end
+    @connection ||= Net::HTTP::Persistent.new('logger')
   end
 end
