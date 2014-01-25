@@ -1,6 +1,6 @@
 # HttpLogger
 
-TODO: Write a gem description
+A Ruby logger over HTTP. Uses PUT for logging, for now at least.
 
 ## Installation
 
@@ -23,6 +23,7 @@ config.logger = HttpLogger.new('https://data.logentries.com', '/ACCOUNT_KEY/host
 ## TODO
 
 - Buffer requests
+- More methods than PUT?
 
 ## Contributing
 

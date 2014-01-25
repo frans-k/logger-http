@@ -6,10 +6,10 @@ require 'http_logger/version'
 Gem::Specification.new do |spec|
   spec.name          = "http_logger"
   spec.version       = HttpLogger::VERSION
-  spec.authors       = ["Frans Krojegård"]
-  spec.email         = ["frans.krojegard@mittmedia.se"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
+  spec.authors       = ["Frans Krojegård"]
+  spec.email         = ["frans@krojegard.com"]
+  spec.description   = "A http logger"
+  spec.summary       = "A Ruby logger over HTTP"
   spec.homepage      = ""
   spec.license       = "MIT"
 
