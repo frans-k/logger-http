@@ -1,11 +1,12 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'http_logger/version'
+require 'logger'
+require 'logger-http/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "http_logger"
-  spec.version       = HttpLogger::VERSION
+  spec.name          = "logger-http"
+  spec.version       = Logger::HTTP::VERSION
   spec.authors       = ["Frans Krojegård"]
   spec.email         = ["frans@krojegard.com"]
   spec.description   = "A http logger"

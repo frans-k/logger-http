@@ -1,6 +1,6 @@
-describe HttpLogger do
+describe Logger::HTTP do
   def init
-    HttpLogger.new 'https://logging-service.dev', '/data/api-key'
+    Logger::HTTP.new 'https://logging-service.dev', '/data/api-key'
   end
 
   it 'initializes successfully' do

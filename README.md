@@ -1,4 +1,4 @@
-# HttpLogger
+# Logger::HTTP
 
 A Ruby logger over HTTP. Uses PUT for logging, for now at least.
 
@@ -6,7 +6,7 @@ A Ruby logger over HTTP. Uses PUT for logging, for now at least.
 
 Add this line to your application's Gemfile:
 
-    gem 'http_logger'
+    gem 'logger-http'
 
 And then execute:
 
@@ -14,11 +14,11 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install http_logger
+    $ gem install logger-http
 
 ## Usage
 
-config.logger = HttpLogger.new('https://data.logentries.com', '/ACCOUNT_KEY/hosts/HOST/LOG/?realtime=1')
+config.logger = Logger::HTTP.new('https://data.logentries.com', '/ACCOUNT_KEY/hosts/HOST/LOG/?realtime=1')
 
 ## TODO
 

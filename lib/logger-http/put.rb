@@ -1,6 +1,6 @@
 require 'net/http/persistent'
 
-module HttpLogger::Put
+module Logger::HTTP::Put
   def self.new path, message
     @path = path
     Net::HTTP::Put.new(@path).tap do |r|

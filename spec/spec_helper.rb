@@ -1,5 +1,5 @@
 require 'minitest/autorun'
-require File.expand_path('lib/http_logger')
+require File.expand_path('lib/logger-http')
 
 if __FILE__ == $0
   #$LOAD_PATH.unshift('lib', 'spec')
