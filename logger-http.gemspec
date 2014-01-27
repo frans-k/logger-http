@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["frans@krojegard.com"]
   spec.description   = "A http logger"
   spec.summary       = "A Ruby logger over HTTP"
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/frunns/logger-http"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
