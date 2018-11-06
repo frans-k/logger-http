@@ -1,5 +1,7 @@
 # Logger::HTTP
 
+2018: Wrote this in 2014, apparently, unclear where and how it was used.
+
 A Ruby logger over HTTP. Uses PUT for logging, for now at least.
 
 ## Installation
@@ -18,7 +20,7 @@ Or install it yourself as:
 
 ## Usage
 
-config.logger = Logger::HTTP.new('https://data.logentries.com', '/ACCOUNT_KEY/hosts/HOST/LOG/?realtime=1')
+    config.logger = Logger::HTTP.new('https://data.logentries.com', '/ACCOUNT_KEY/hosts/HOST/LOG/?realtime=1')
 
 ## TODO
 
